@@ -1,0 +1,15 @@
+# CAD
+*.bak
+*.ipj.lck
+OldVersions/
+_V/
+
+# Node
+node_modules/
+dist/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
