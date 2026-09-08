@@ -38,8 +38,7 @@ plate, or drop Peltier altogether for a compressor if real cooling were the poin
 A 12 V battery bank I assembled as a portable backup power source, built around safe
 fusing and a printed enclosure.
 
-<!-- battery-01 — DOPLNIT: foto hotové baterie (obal, konektory). Ulož jako images/battery-01.jpg a odkomentuj. -->
-<!-- ![100 Ah LiFePO4 power bank](images/battery-01.jpg) -->
+![100 Ah LiFePO4 pack in its printed PETG enclosure](images/battery-01.jpg)
 
 | | |
 |---|---|
@@ -50,10 +49,17 @@ fusing and a printed enclosure.
 | Charging | From a vehicle via a Renogy 12→12 V 20 A DC-DC charger (LiFePO4 profile), or from mains via a Victron 30 A charger |
 | Enclosure | 3D-printed PETG |
 
+![BMS and wiring inside the pack](images/battery-02.jpg)
+
 A working unit. The fusing is the deliberate part: 10 A on each output socket and a 40 A
 fuse on the XT60 input, so neither the loads nor the charge path can push the pack past
 what it should see. The Bluetooth BMS lets me watch cell balance and state of charge from
 the phone.
+
+![Wiring diagram — sources, fusing and BMS](images/battery-wiring.png)
+
+*The full wiring: charge sources on top, protective fusing at every port, and a Daly BMS
+between the pack and the loads.*
 
 ## Beer tally counter (2020)
 
