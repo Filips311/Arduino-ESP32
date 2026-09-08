@@ -70,9 +70,6 @@ You tap your ISIC (RFID) card and it logs a beer to your name on an SD card; pow
 down, and next time someone else taps theirs. An encoder-driven menu was meant to show
 the standings.
 
-<!-- beer-01 — volitelně, pokud fotku najdeš. Ulož jako images/beer-01.jpg a odkomentuj. -->
-<!-- ![Beer tally counter](images/beer-01.jpg) -->
-
 | | |
 |---|---|
 | Board | Arduino Uno, 12 V in via an LM2596 step-down |
@@ -80,6 +77,8 @@ the standings.
 | Storage | SD card module |
 | Display | 16×2 LCD |
 | Input | Rotary encoder |
+
+![Wiring of the reader, logger and display](images/beer-wiring.png)
 
 A prototype that got most of the way there: card reading, SD logging and the LCD all
 worked. I stalled on the rotary-encoder menu and never finished the navigation, so it
