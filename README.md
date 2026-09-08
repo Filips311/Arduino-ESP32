@@ -8,22 +8,24 @@ write-ups stay honest about what worked and what didn't.
 ## Peltier car fridge (2025)
 
 An attempt to turn a cool-box into an active fridge: a Peltier module, a two-fan heat
-exchanger, two temperature sensors and an ESP32. The ESP32 hosts its own web page over
-Wi-Fi — you set a target temperature and read both sensors from your phone, with no app
-to install.
+exchanger and an ESP32. The ESP32 brings up its own Wi-Fi hotspot and serves a control
+page — you connect from your phone, set a target temperature and watch the reading live,
+no app to install. Control is plain on/off: in auto mode the Peltier and fans switch on
+whenever the box is above target, and the outer fan keeps running for 20 s after each
+cycle to clear the heat still sitting in the exchanger.
 
-<!-- fridge-01 — DOPLNIT: foto autolednice (box + výměník/ventilátory). -->
-<!-- fridge-02 — volitelně: foto zapojení. Ulož jako images/fridge-01.jpg atd. a odkomentuj. -->
-<!-- ![Peltier car fridge](images/fridge-01.jpg) -->
+![Cool-box with the Peltier heat exchanger set into the lid](images/fridge-01.jpg)
 
 | | |
 |---|---|
 | Controller | ESP32 DevKit |
 | Cooling | TEC1-12705 Peltier module, heat exchanger, two fans |
-| Sensors | 2× DS18B20 — one inside the box, one on the exchanger |
+| Sensors | DS18B20 inside the box (a second sensor on the exchanger was wired but left disabled in the final firmware) |
 | Switching | Logic-level MOSFETs (IRLB8721), driven straight from the ESP32's 3.3 V pins — on/off, no PWM |
-| Interface | ESP32 web server — an HTML page for the setpoint and live temperatures |
+| Interface | ESP32 Wi-Fi hotspot + web server — live temperature, setpoint, and a manual override mode |
 | Box | ~30 L cool-box |
+
+![The control page the ESP32 serves over Wi-Fi](images/fridge-02-webui.png)
 
 It didn't really work — and that was the useful part. With the insulation as built, the
 box dropped only about 2 °C in 30 minutes, and only within ~5 cm of the cold side; heat
