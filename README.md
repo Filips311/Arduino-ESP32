@@ -27,6 +27,9 @@ cycle to clear the heat still sitting in the exchanger.
 
 ![The control page the ESP32 serves over Wi-Fi](images/fridge-02-webui.png)
 
+*Firmware: [`Car_Fridge.ino`](firmware/car-fridge/Car_Fridge.ino) — Wi-Fi access point,
+web server and the on/off control loop.*
+
 It didn't really work — and that was the useful part. With the insulation as built, the
 box dropped only about 2 °C in 30 minutes, and only within ~5 cm of the cold side; heat
 was leaking back in about as fast as the Peltier pulled it out. The goal had been to work
